@@ -40,4 +40,10 @@ if(puntaje === 0){
     resultado = `Maquina gana`
 }
 
-alert(resultado + '\n\n' + jugada.join('\n'));
+let punto = document.getElementById('srcData')
+punto.innerHTML = `<p>${resultado+'\n\n'}</p>`
+jugada.forEach(item => {
+    punto.innerHTML += `<p>${item+'\n'}</p>`
+})
+//punto.innerHTML = `<p>${resultado + '\n\n' + jugada.join('\n')}</p>`
+//alert(resultado + '\n\n' + jugada.join('\n'));
